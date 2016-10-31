@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gsdharmesh.medicare.register"
+    tools:showIn="@layout/activity_register"
+    android:background="@drawable/blue"
+    android:scaleType="centerCrop">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etr_email"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Email ID"
+        android:background="@drawable/drawer3"
+        />
+
+    <EditText
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/etr_pass"
+        android:layout_below="@+id/etr_email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etr_email"
+        android:layout_alignEnd="@+id/etr_email"
+        android:hint="Password"
+        android:background="@drawable/drawer3"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/etr_ph"
+        android:layout_below="@+id/etr_pass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etr_pass"
+        android:layout_alignEnd="@+id/etr_pass"
+        android:hint="Phone number"
+        android:background="@drawable/drawer3"
+        android:layout_marginTop="10dp"/>
+
+
+    <Button
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btn_submit"
+        android:background="#ff9966"
+        android:layout_marginBottom="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/chk_terms"
+        android:layout_alignEnd="@+id/chk_terms" />
+
+    <CheckBox
+        android:checked="true"
+        style="@style/MyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I here by, accept the terms and condition by clicking Submit"
+        android:id="@+id/chk_terms"
+        android:layout_above="@+id/btn_submit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/etr_deg"
+        android:hint="Degrees(if doctor)"
+        android:background="@drawable/drawer3"
+        android:layout_marginBottom="10dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/etr_spe"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/etr_spe"
+        android:hint="Specialization(if doctor)"
+        android:background="@drawable/drawer3"
+        android:layout_above="@+id/chk_terms"
+        android:focusableInTouchMode="true"
+        android:layout_alignRight="@+id/chk_terms"
+        android:layout_alignEnd="@+id/chk_terms"
+        android:layout_marginBottom="10dp"/>
+
+    <Spinner
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin_role"
+
+        android:focusable="true"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <TextView
+        style="@style/MyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Registering as :"
+        android:id="@+id/textView2"
+        android:layout_marginTop="220dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#64B5F6</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="indigo">#4B0082</color>
+    <color name="pink">#ff6964</color>
+
+
+    <color name="active">#4FC3F7</color>
+    <color name="inactive">#0288D1</color>
+
+
+    <array name="inact">
+        <item>@color/active</item>
+        <item>@color/active</item>
+        <item>@color/active</item>
+        <item>@color/active</item>
+        <item>@color/active</item>
+
+    </array>
+    <array name="act">
+        <item>@color/inactive</item>
+        <item>@color/inactive</item>
+        <item>@color/inactive</item>
+        <item>@color/inactive</item>
+        <item>@color/inactive</item>
+
+    </array>
+
+</resources>
