@@ -32,6 +32,18 @@ public class homePatient extends AppCompatActivity {
         });
 
 
+        ImageView credits = (ImageView) findViewById(R.id.thumbnail3);
+        credits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent INT5 = new Intent(homePatient.this, credits.class);
+
+                startActivity(INT5);
+            }
+        });
+
+
+
         ImageView im=(ImageView) findViewById(R.id.thumbnail);
         im.setOnClickListener(new View.OnClickListener() {
             @Override

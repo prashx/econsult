@@ -32,6 +32,17 @@
         </activity>
         <activity android:name=".Profile" >
         </activity>
+        <activity android:name=".credits"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".homePatient"
+
+
+
+            >
+
+
+
+        </activity>
     </application>
 
 </manifest>
