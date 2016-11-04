@@ -201,8 +201,16 @@ public class Message extends AppCompatActivity {
 
                                     pat_message(line);
 
-                        }else
-                            doc_message(line);
+
+                        }else {
+
+
+
+                                    doc_message(line);
+
+
+                        }
+
                     }
                     in.close();
                 } catch (IOException e) {

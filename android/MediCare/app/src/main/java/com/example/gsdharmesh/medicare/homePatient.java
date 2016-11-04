@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,9 +25,30 @@ public class homePatient extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent INT=new Intent(homePatient.this,showChatList.class);
+                Intent INT3=new Intent(homePatient.this,showChatList.class);
+                INT3.putExtra("id", getIntent().getExtras().getString("id"));
+                startActivity(INT3);
+            }
+        });
+
+
+        ImageView im=(ImageView) findViewById(R.id.thumbnail);
+        im.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent INT=new Intent(homePatient.this,Profile.class);
                 INT.putExtra("id", getIntent().getExtras().getString("id"));
                 startActivity(INT);
+            }
+        });
+
+        ImageView im2=(ImageView) findViewById(R.id.thumbnail2);
+        im2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent INT1=new Intent(homePatient.this,showChatList.class);
+                INT1.putExtra("id", getIntent().getExtras().getString("id"));
+                startActivity(INT1);
             }
         });
 
