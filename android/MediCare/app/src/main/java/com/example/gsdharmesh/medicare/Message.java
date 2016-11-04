@@ -2,22 +2,21 @@ package com.example.gsdharmesh.medicare;
 
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.LinearLayout.*;
-import android.widget.*;
-import android.widget.Toast;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
-import java.net.InterfaceAddress;
 import java.net.URL;
-
-import static com.example.gsdharmesh.medicare.R.drawable.shadows;
 
 public class Message extends AppCompatActivity {
     RelativeLayout my_root;
@@ -77,12 +76,16 @@ public class Message extends AppCompatActivity {
         t[tc].setPadding(200,10,0,0);
         t[tc].setId(Integer.parseInt(""+tid));
         t[tc].setText(message);
-
         layout.addView(t[tc], params[lc]);
-        String pp1,pp2;
+
         tc++;
         lc++;
         tid++;
+
+
+
+
+
     }
 
     void doc_message(String message)
@@ -100,6 +103,7 @@ public class Message extends AppCompatActivity {
         tc++;
         lc++;
         tid++;
+
     }
     void pat_message(String message)
     {
@@ -160,21 +164,7 @@ public class Message extends AppCompatActivity {
                  in = new BufferedReader(
                         new InputStreamReader(con.getInputStream()));
                 String line;
-                if(ch==1)
-                {
 
-                while ((line = in.readLine()) != null) {
-
-                    if(in.readLine().equals("1")) {
-                        if(tid==1) {
-                            firstmessage(line);
-                        continue;
-                        }pat_message(line);
-
-                    }else
-                        doc_message(line);
-                }}
-                in.close();
 
             } catch (Exception e) {
             }
@@ -183,7 +173,6 @@ public class Message extends AppCompatActivity {
         protected void onPostExecute(String x) {
 
 
-            int m=0;
 
             if(ch==1)
             {
@@ -192,11 +181,12 @@ public class Message extends AppCompatActivity {
                     while ((line = in.readLine()) != null) {
 
                         if(in.readLine().equals("1")) {
-                            if(m==0) {
+                            if(tid==1) {
+
+
+
 
                                         firstmessage(line);
-                                m++;
-
 
                                 continue;
                             }
