@@ -183,6 +183,7 @@ public class Message extends AppCompatActivity {
         protected void onPostExecute(String x) {
 
 
+            int m=0;
 
             if(ch==1)
             {
@@ -191,9 +192,10 @@ public class Message extends AppCompatActivity {
                     while ((line = in.readLine()) != null) {
 
                         if(in.readLine().equals("1")) {
-                            if(tid==1) {
+                            if(m==0) {
 
                                         firstmessage(line);
+                                m++;
 
 
                                 continue;
