@@ -1,0 +1,29 @@
+name: Update README Timestamp
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+
+      - name: Run script
+        run: bash scripts/update_readme.sh
+
+      - name: Commit & push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update README timestamp" || echo "No changes"
+          git push
